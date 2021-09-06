@@ -1,0 +1,105 @@
+-- Create tables for the above list given
+
+
+CREATE DATABASE CHUBBS;
+CREATE TABLE users(us_ID VARCHAR(20),us_NAME TEXT(20));
+CREATE TABLE codekata(problem_solved VARCHAR(20),cod_NAME TEXT(20));
+CREATE TABLE attendance(att_ID VARCHAR(20),att_NAME TEXT(20));
+CREATE TABLE topics(top_ID VARCHAR(20),top_NAME TEXT(20));
+CREATE TABLE tasks(tas_ID VARCHAR(20),tas_NAME TEXT(20));
+CREATE TABLE company_drives(com_ID VARCHAR(20),com_NAME TEXT(20));
+CREATE TABLE mentors(ment_ID VARCHAR(20),ment_NAME TEXT(20));
+CREATE TABLE students_activated_courses(stud_ID VARCHAR(20),stud_NAME TEXT(20));
+CREATE TABLE courses(cou_ID VARCHAR(20),cou_NAME TEXT(20));
+
+
+
+
+-- insert at least 5 rows of values in each table
+
+
+INSERT INTO users VALUES (1,"ANSH");
+INSERT INTO users VALUES (2,"AYUSH");
+INSERT INTO users VALUES (3,"ANIMESH");
+INSERT INTO users VALUES (4,"AKSHAT");
+INSERT INTO users VALUES (5,"ANSHUMAN");
+
+INSERT INTO codekata VALUES (1,"YASH");
+INSERT INTO codekata VALUES (2,"YASHI");
+INSERT INTO codekata VALUES (3,"YASHWI");
+INSERT INTO codekata VALUES (4,"YEMEN");
+INSERT INTO codekata VALUES (5,"YANG");
+
+INSERT INTO attendance VALUES (1,"BINDU");
+INSERT INTO attendance VALUES (2,"BINA");
+INSERT INTO attendance VALUES (3,"BIKAS");
+INSERT INTO attendance VALUES (4,"BIRJESH");
+INSERT INTO attendance VALUES (5,"BURMA");
+
+INSERT INTO topics VALUES (1,"PLANTS");
+INSERT INTO topics VALUES (2,"GRAVITY");
+INSERT INTO topics VALUES (3,"LINEAR EQUATION");
+INSERT INTO topics VALUES (4,"CIRCLE");
+INSERT INTO topics VALUES (5,"DENSITY");
+
+INSERT INTO tasks VALUES (1,"LEARNING");
+INSERT INTO tasks VALUES (2,"READING");
+INSERT INTO tasks VALUES (3,"PLAYING");
+INSERT INTO tasks VALUES (4,"SWIMMING");
+INSERT INTO tasks VALUES (5,"SOLVING");
+
+INSERT INTO company_drives VALUES (1,"HP");
+INSERT INTO company_drives VALUES (2,"DELL");
+INSERT INTO company_drives  VALUES (3,"PwC");
+INSERT INTO company_drives  VALUES (4,"OPPO");
+INSERT INTO company_drives  VALUES (5,"VIVO");
+
+INSERT INTO mentors VALUES (1,"VISHAL");
+INSERT INTO mentors VALUES (2,"SONAKSHI");
+INSERT INTO mentors  VALUES (3,"VIPUL");
+INSERT INTO mentors  VALUES (4,"MONISH");
+INSERT INTO mentors  VALUES (5,"GOPA");
+
+INSERT INTO students_activated_courses VALUES (1,"LEADERSHIP");
+INSERT INTO students_activated_courses VALUES (2,"DSA");
+INSERT INTO students_activated_courses  VALUES (3,"DEEP LEARNING");
+INSERT INTO students_activated_courses VALUES (4,"MACHINE LEARNING");
+INSERT INTO students_activated_courses  VALUES (5,"PYTHON");
+
+INSERT INTO courses VALUES (1,"GEOMETRY");
+INSERT INTO courses VALUES (2,"TRIGNOMETRY");
+INSERT INTO courses  VALUES (3,"ARTIFICAL INTELIGENCE");
+INSERT INTO courses VALUES (4,"AUTONOMUS");
+INSERT INTO courses  VALUES (5,"RPA");
+
+
+
+
+
+-- get number problems solved in codekata by combining the users
+
+SELECT SUM(problem_solved) FROM codekata;
+
+
+
+
+
+-- display the no of company drives attended by a user
+
+SELECT * FROM company_drives;
+
+
+
+
+
+-- list all the mentors
+
+SELECT * FROM MENTORS;
+
+
+
+
+-- list the number of students that are assigned for a mentor
+
+SELECT SUM(NUMBER_OF_STUDENTS) FROM MENTORS;
+
